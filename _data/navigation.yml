@@ -1,22 +1,15 @@
 # main links links
 main:
-  - title: "Publications"
-    url: /publications/
+  - title: "Things I've Done"
+    url: /portfolio/  
+    
+  - title: "Software I've Written"
+    url: /code/   
 
-  - title: "Talks"
-    url: /talks/    
-
-  - title: "Teaching"
+  - title: "Thoughts On and Experiences With Teaching"
     url: /teaching/    
     
-  - title: "Portfolio"
-    url: /portfolio/
+  - title: "Other Things I Like"
+    url: /other_interests/
         
-  - title: "Blog Posts"
-    url: /year-archive/
     
-  - title: "CV"
-    url: /cv/
-    
-  - title: "Guide"
-    url: /markdown/

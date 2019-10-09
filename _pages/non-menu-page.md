@@ -1,14 +1,14 @@
 ---
 permalink: /non-menu-page/
-title: "Page not in menu"
-excerpt: "This is a page not in th emain menu"
+title: "Your Imagination Made This Page Up"
+excerpt: "My imagination never made this."
 author_profile: true
 redirect_from: 
   - "/nmp/"
   - "/nmp.html"
 ---
 
-This is a page not in the menu. You can use markdown in this page.
+I haven't made this, but feel free to convince me that I should.
 
 Heading 1
 ======
