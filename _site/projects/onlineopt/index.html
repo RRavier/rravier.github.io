@@ -1,0 +1,427 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Data Driven Online Optimization - Hello!</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="Hello!">
+<meta property="og:title" content="Data Driven Online Optimization">
+
+
+  <link rel="canonical" href="http://rravier.github.io/projects/onlineopt/">
+  <meta property="og:url" content="http://rravier.github.io/projects/onlineopt/">
+
+
+
+  <meta property="og:description" content="Research in optimization has exploded due to increases in computational ability. Online optimization, where objective functions can change in time, is a field with vast potential for both interesting theoretical investigations as well as practical applications well outside areas traditionally considered in, e.g. control and learning communities.">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Robert Ravier",
+      "url" : "http://rravier.github.io",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="http://rravier.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Hello! Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://rravier.github.io/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    
+
+<!-- start custom head snippets -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://rravier.github.io/images/apple-touch-icon-57x57.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="60x60" href="http://rravier.github.io/images/apple-touch-icon-60x60.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="72x72" href="http://rravier.github.io/images/apple-touch-icon-72x72.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="76x76" href="http://rravier.github.io/images/apple-touch-icon-76x76.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="114x114" href="http://rravier.github.io/images/apple-touch-icon-114x114.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="120x120" href="http://rravier.github.io/images/apple-touch-icon-120x120.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="144x144" href="http://rravier.github.io/images/apple-touch-icon-144x144.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="152x152" href="http://rravier.github.io/images/apple-touch-icon-152x152.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="180x180" href="http://rravier.github.io/images/apple-touch-icon-180x180.png?v=M44lzPylqQ">
+<link rel="icon" type="image/png" href="http://rravier.github.io/images/favicon-32x32.png?v=M44lzPylqQ" sizes="32x32">
+<link rel="icon" type="image/png" href="http://rravier.github.io/images/android-chrome-192x192.png?v=M44lzPylqQ" sizes="192x192">
+<link rel="icon" type="image/png" href="http://rravier.github.io/images/favicon-96x96.png?v=M44lzPylqQ" sizes="96x96">
+<link rel="icon" type="image/png" href="http://rravier.github.io/images/favicon-16x16.png?v=M44lzPylqQ" sizes="16x16">
+<link rel="manifest" href="http://rravier.github.io/images/manifest.json?v=M44lzPylqQ">
+<link rel="mask-icon" href="http://rravier.github.io/images/safari-pinned-tab.svg?v=M44lzPylqQ" color="#000000">
+<link rel="shortcut icon" href="/images/favicon.ico?v=M44lzPylqQ">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="http://rravier.github.io/images/mstile-144x144.png?v=M44lzPylqQ">
+<meta name="msapplication-config" content="http://rravier.github.io/images/browserconfig.xml?v=M44lzPylqQ">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="http://rravier.github.io/assets/css/academicons.css"/>
+
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://rravier.github.io/">Hello!</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://rravier.github.io/portfolio/">Things I've Done</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://rravier.github.io/code/">Software I've Written</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://rravier.github.io/teaching/">Thoughts On and Experiences With Teaching</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="http://rravier.github.io/other_interests/">Other Things I Like</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  <div class="author__avatar">
+    
+    	<img src="http://rravier.github.io/images/me_150x150.jpg" class="author__avatar" alt="Robert Ravier">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Robert Ravier</h3>
+    <p class="author__bio">Mathematician, Postdoc, and Unabashed Professional Wrestling Fan</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+      
+      
+      
+        <li><a href="mailto:robert.ravier@duke.edu"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
+      
+      
+       
+      
+        <li><a href="https://twitter.com/RobRavier"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://github.com/rravier"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <li><a href="https://scholar.google.com/citations?user=xfuxR1kAAAAJ&hl=en"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Data Driven Online Optimization">
+    <meta itemprop="description" content="Research in optimization has exploded due to increases in computational ability. Online optimization, where objective functions can change in time, is a field with vast potential for both interesting theoretical investigations as well as practical applications well outside areas traditionally considered in, e.g. control and learning communities.">
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Data Driven Online Optimization
+</h1>
+          
+        
+        
+        
+        
+             
+        
+    
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <p>Research in optimization has exploded due to increases in computational ability. Online optimization, where objective functions can change in time, is a field with vast potential for both interesting theoretical investigations as well as practical applications well outside areas traditionally considered in, e.g. control and learning communities.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>My research in this area has been primarily motivated by statistics of time-varying distributions on (potentially) time-varying nonconvex metric spaces (e.g. image and shape manifolds) for which the distributions are not directly observable, but a number of samples at each time are. In this setting, arguably the most canonical of all statistics, the mean, is not defined as usual due to the lack of convexity; it is instead defined as the minimizing point of a functional known as the Fréchet variance. Given that means can be interpreted as “prototypical” examples of data, it then becomes important to better understand the dynamics of optimization problems.</p>
+
+<p>Since the distributions at each time are not directly observable, we need to combine observed data with probabilistic models in order to make approximations of the distributions, hence approximations of the means via conditional expectations given a model class. Models that capture accurately capture these means can give powerful inferential insight to the behavior of various phenomena. Again, as means are defined by optimization problems, this turns into a question of modeling dynamical systems of optimization problems.</p>
+
+<p>Dynamical systems of optimization problems have been studied, though usually under the setting where the problem is smoothly varying in time or under adversarial (i.e. non-predictable) dynamics, neither of which perfectly fits our case. The role of prediction has been studied, but in a much more limited fashion. The standard methodology of this field is to adapt traditional optimization algorithms to online scenarios in obvious manners, and then investigate properties of various performance measures (though, in some cases, you can exploit structure and do things a little different, as is done in predictor-corrector methods).</p>
+
+<p>If you view the work as somewhat incremental, <em>it’s okay. I do, too.</em> It is important to note that <strong>everything below is more about the interaction of a particular coupling of dynamical systems (objective functions and optimizers) and less about optimization proper.</strong> There is an abundance of potential for future work, but involves much better of understanding of dynamical systems in the proper language of optimization, which is itself a non-trivial task given the difference in appropriate topology.</p>
+
+<div class="list__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://rravier.github.io/projects/onlineopt/ParameterPredictionOCO" rel="permalink">Prediction in Online Convex Optimization: The Parametrizable Setting
+</a>
+      
+    </h3>
+    
+ <!--     
+
+        
+       -->
+
+    
+    <p class="archive__item-excerpt" itemprop="description"><p>Online convex optimization (OCO) problems typically focus on adversarial scenarios. Many, however, aren’t. If you know this, and have some reasonable model of your future, what improvements can you get? Furthermore, how well can you do if you’re starting from scratch?
+
+<strong><a href="http://rravier.github.io/projects/onlineopt/ParameterPredictionOCO" rel="permalink"> Read more</a></strong></p></p>
+    
+    
+    
+
+  </article>
+</div>
+
+<div class="list__item">
+  <article class="archive__item" itemscope="" itemtype="http://schema.org/CreativeWork">
+    
+
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://rravier.github.io/projects/onlineopt/DistributedOCOSmoothness" rel="permalink">Curvature Bounds Improve Online Performance for Distributed Optimization
+</a>
+      
+    </h3>
+    
+ <!--     
+
+        
+       -->
+
+    
+    <p class="archive__item-excerpt" itemprop="description"><p>For centralized algorithms, where there is only one agent optimizing, it is known that strong convexity of objective functions improves convergence rates of optimization methods, and thus improves performance guarantees in online scenarios in the centralized setting, <em>even in the adversarial case</em>. Distributed methods have multiple agents optimizing a function simultaneously. Can we get similar performance guarantees of online methods in the distributed setting, or will requiring communication of agents destroy any hope?
+
+<strong><a href="http://rravier.github.io/projects/onlineopt/DistributedOCOSmoothness" rel="permalink"> Read more</a></strong></p></p>
+    
+    
+    
+
+  </article>
+</div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=http://rravier.github.io/projects/onlineopt/" class="btn btn--twitter" title="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://rravier.github.io/projects/onlineopt/" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://rravier.github.io/projects/onlineopt/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="http://rravier.github.io/projects/gerrymandering/" class="pagination--pager" title="Quantitative Foundations of Partisan Gerrymandering
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<a href="/sitemap/">Sitemap</a>
+<!-- end custom footer snippets -->
+
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/rravier"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="http://rravier.github.io/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Robert Ravier. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    <script src="http://rravier.github.io/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
+
